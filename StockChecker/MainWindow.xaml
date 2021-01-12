@@ -7,6 +7,28 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid Grid.Column ="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="80"/>
+                <RowDefinition Height="80"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Image Source="Resource/FireLogo.png" Grid.Row="0"/>
+            <Button Content="관심종목" Grid.Row="1" Style="{DynamicResource TransperantButton}" Click="Button_Click"/>
+            <Button Content="프트폴리오" Grid.Row="2" Style="{DynamicResource TransperantButton}" Click="Button_Click_1"/>
+
+        </Grid>
+        
+        <Frame Name="ContentFrame" Grid.Column ="1" Background="AliceBlue">
+
+        </Frame>
         
     </Grid>
 </Window>
